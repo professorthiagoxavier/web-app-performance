@@ -70,3 +70,7 @@ D:\pasta\web-app-performance\web-app-performance\obj\Debug\net8.0\ref\web-app-pe
 D:\pasta\web-app-performance\web-app-performance\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\pasta\web-app-performance\web-app-performance\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
 D:\pasta\web-app-performance\web-app-performance\bin\Debug\net8.0\StackExchange.Redis.dll
+D:\pasta\web-app-performance\web-app-performance\bin\Debug\net8.0\web-app-domain.dll
+D:\pasta\web-app-performance\web-app-performance\bin\Debug\net8.0\web-app-repository.dll
+D:\pasta\web-app-performance\web-app-performance\bin\Debug\net8.0\web-app-domain.pdb
+D:\pasta\web-app-performance\web-app-performance\bin\Debug\net8.0\web-app-repository.pdb

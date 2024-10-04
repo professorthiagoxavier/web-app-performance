@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using MySqlConnector;
 using Newtonsoft.Json;
 using StackExchange.Redis;
-using web_app_performance.Model;
+using web_app_domain;
+using web_app_repository;
 
 namespace web_app_performance.Controllers
 {
@@ -12,6 +13,12 @@ namespace web_app_performance.Controllers
     public class UsuarioController : ControllerBase
     {
         private static ConnectionMultiplexer redis;
+        private readonly IUsuarioRepository _repository;
+
+        public UsuarioController(IUsuarioRepository repository)
+        {
+            _repository = repository;
+        }
 
         [HttpGet]
         public async Task<IActionResult> GetUsuario()
@@ -27,27 +34,16 @@ namespace web_app_performance.Controllers
                 return Ok(user);
             }
 
-            string connectionString = "Server=localhost;Database=sys;User=root;Password=123;";
-            using var connection = new MySqlConnection(connectionString);
-            await connection.OpenAsync();
-            string query = "select Id, Nome, Email from usuarios;";
-            var usuarios = await connection.QueryAsync<Usuario>(query);
+            var usuarios = await _repository.ListarUsuarios();
             string usuariosJson = JsonConvert.SerializeObject(usuarios);
             await db.StringSetAsync(key, usuariosJson);
-
             return Ok(usuarios);
         }
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Usuario usuario)
         {
-            string connectionString = "Server=localhost;Database=sys;User=root;Password=123;";
-            using var connection = new MySqlConnection(connectionString);
-            await connection.OpenAsync();
-
-            string sql = @"insert into usuarios(nome, email) 
-                            values(@nome, @email);";
-            await connection.ExecuteAsync(sql, usuario);
+            await _repository.SalvarUsuario(usuario);         
 
             //apagar o cachê
             string key = "getusuario";
@@ -61,36 +57,20 @@ namespace web_app_performance.Controllers
         [HttpPut]
         public async Task<IActionResult> Put([FromBody] Usuario usuario)
         {
-            string connectionString = "Server=localhost;Database=sys;User=root;Password=123;";
-            using var connection = new MySqlConnection(connectionString);
-            await connection.OpenAsync();
-
-            string sql = @"update usuarios 
-                            set Nome = @nome, 
-	                            Email = @email
-                            where Id = @id;";
-
-            await connection.ExecuteAsync(sql, usuario);
+            await _repository.AtualizarUsuario(usuario);
 
             //apagar o cachê
             string key = "getusuario";
             redis = ConnectionMultiplexer.Connect("localhost:6379");
             IDatabase db = redis.GetDatabase();
             await db.KeyDeleteAsync(key);
-
             return Ok();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            string connectionString = "Server=localhost;Database=sys;User=root;Password=123;";
-            using var connection = new MySqlConnection(connectionString);
-            await connection.OpenAsync();
-
-            string sql = @"delete from usuarios where Id = @id;";
-
-            await connection.ExecuteAsync(sql, new { id });
+            await _repository.RemoverUsuario(id);
 
             //apagar o cachê
             string key = "getusuario";
