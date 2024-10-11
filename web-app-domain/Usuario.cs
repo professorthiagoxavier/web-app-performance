@@ -1,5 +1,7 @@
-﻿namespace web_app_domain
+﻿
+namespace web_app_domain
 {
+    //[ExcludeFromCodeCoverage]
     public class Usuario
     {
         public int Id { get; set; }

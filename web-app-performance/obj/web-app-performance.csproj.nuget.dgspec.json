@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\pasta\\web-app-performance\\web-app-performance\\web-app-performance.csproj": {}
+    "D:\\projects\\web-app-performance\\web-app-performance\\web-app-performance.csproj": {}
   },
   "projects": {
-    "D:\\pasta\\web-app-performance\\web-app-domain\\web-app-domain.csproj": {
+    "D:\\projects\\web-app-performance\\web-app-domain\\web-app-domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\pasta\\web-app-performance\\web-app-domain\\web-app-domain.csproj",
+        "projectUniqueName": "D:\\projects\\web-app-performance\\web-app-domain\\web-app-domain.csproj",
         "projectName": "web-app-domain",
-        "projectPath": "D:\\pasta\\web-app-performance\\web-app-domain\\web-app-domain.csproj",
+        "projectPath": "D:\\projects\\web-app-performance\\web-app-domain\\web-app-domain.csproj",
         "packagesPath": "C:\\Softwares\\Nuget",
-        "outputPath": "D:\\pasta\\web-app-performance\\web-app-domain\\obj\\",
+        "outputPath": "D:\\projects\\web-app-performance\\web-app-domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "D:\\pasta\\web-app-performance\\web-app-performance\\web-app-performance.csproj": {
+    "D:\\projects\\web-app-performance\\web-app-performance\\web-app-performance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\pasta\\web-app-performance\\web-app-performance\\web-app-performance.csproj",
+        "projectUniqueName": "D:\\projects\\web-app-performance\\web-app-performance\\web-app-performance.csproj",
         "projectName": "web-app-performance",
-        "projectPath": "D:\\pasta\\web-app-performance\\web-app-performance\\web-app-performance.csproj",
+        "projectPath": "D:\\projects\\web-app-performance\\web-app-performance\\web-app-performance.csproj",
         "packagesPath": "C:\\Softwares\\Nuget",
-        "outputPath": "D:\\pasta\\web-app-performance\\web-app-performance\\obj\\",
+        "outputPath": "D:\\projects\\web-app-performance\\web-app-performance\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -98,11 +98,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\pasta\\web-app-performance\\web-app-domain\\web-app-domain.csproj": {
-                "projectPath": "D:\\pasta\\web-app-performance\\web-app-domain\\web-app-domain.csproj"
+              "D:\\projects\\web-app-performance\\web-app-domain\\web-app-domain.csproj": {
+                "projectPath": "D:\\projects\\web-app-performance\\web-app-domain\\web-app-domain.csproj"
               },
-              "D:\\pasta\\web-app-performance\\web-app-repository\\web-app-repository.csproj": {
-                "projectPath": "D:\\pasta\\web-app-performance\\web-app-repository\\web-app-repository.csproj"
+              "D:\\projects\\web-app-performance\\web-app-repository\\web-app-repository.csproj": {
+                "projectPath": "D:\\projects\\web-app-performance\\web-app-repository\\web-app-repository.csproj"
               }
             }
           }
@@ -158,14 +158,14 @@
         }
       }
     },
-    "D:\\pasta\\web-app-performance\\web-app-repository\\web-app-repository.csproj": {
+    "D:\\projects\\web-app-performance\\web-app-repository\\web-app-repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\pasta\\web-app-performance\\web-app-repository\\web-app-repository.csproj",
+        "projectUniqueName": "D:\\projects\\web-app-performance\\web-app-repository\\web-app-repository.csproj",
         "projectName": "web-app-repository",
-        "projectPath": "D:\\pasta\\web-app-performance\\web-app-repository\\web-app-repository.csproj",
+        "projectPath": "D:\\projects\\web-app-performance\\web-app-repository\\web-app-repository.csproj",
         "packagesPath": "C:\\Softwares\\Nuget",
-        "outputPath": "D:\\pasta\\web-app-performance\\web-app-repository\\obj\\",
+        "outputPath": "D:\\projects\\web-app-performance\\web-app-repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -187,8 +187,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\pasta\\web-app-performance\\web-app-domain\\web-app-domain.csproj": {
-                "projectPath": "D:\\pasta\\web-app-performance\\web-app-domain\\web-app-domain.csproj"
+              "D:\\projects\\web-app-performance\\web-app-domain\\web-app-domain.csproj": {
+                "projectPath": "D:\\projects\\web-app-performance\\web-app-domain\\web-app-domain.csproj"
               }
             }
           }
